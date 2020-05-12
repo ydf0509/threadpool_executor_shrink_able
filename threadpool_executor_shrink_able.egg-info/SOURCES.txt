@@ -1,0 +1,8 @@
+README.md
+setup.py
+threadpool_executor_shrink_able/__init__.py
+threadpool_executor_shrink_able.egg-info/PKG-INFO
+threadpool_executor_shrink_able.egg-info/SOURCES.txt
+threadpool_executor_shrink_able.egg-info/dependency_links.txt
+threadpool_executor_shrink_able.egg-info/requires.txt
+threadpool_executor_shrink_able.egg-info/top_level.txt
