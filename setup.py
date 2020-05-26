@@ -11,7 +11,7 @@ print(filepath)
 
 setup(
     name='threadpool_executor_shrink_able',  #
-    version="1.0",
+    version="1.2",
     description=( 'shap threadpoolexecutor, realize java keepAliveTime,bounded work queue,direct display of thread errors '),
     keywords=("threadpool", "threadpoolexecutor", "thread shrink", ),
     # long_description=open('README.md', 'r',encoding='utf8').read(),
@@ -46,7 +46,7 @@ setup(
 python setup.py sdist upload -r pypi
 
 
-python setup.py sdist & twine upload dist/threadpool_executor_shrink_able-1.0.tar.gz
+python setup.py sdist & twine upload dist/threadpool_executor_shrink_able-1.2.tar.gz
 twine upload dist/*
 
 

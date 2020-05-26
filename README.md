@@ -16,7 +16,9 @@ pip install threadpool_executor_shrink_able
 
 4、此线程池运行函数出错时候，直接显示线程错误，官方的线程池则不会显示错误，例如函数中写1/0,任然不现实错误。
 
+5.有线程池BoundedThreadPoolExecutor改善线程报错和有界队列。
 
+6.patch_builtin_concurrent_futeres_threadpoolexecutor 支持给内置线程池打猴子补丁的方式，一键替换项目中所有原有的Thredpoolexecutor
 
 用法例子：
 
