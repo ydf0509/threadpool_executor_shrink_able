@@ -17,5 +17,6 @@ if __name__ == '__main__':
 
     def test_error():
         raise ValueError('测试错误')
+
     pool = ThreadPoolExecutor(20)
     pool.submit(test_error)
