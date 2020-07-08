@@ -4,9 +4,9 @@ Version: 1.2
 Summary: shap threadpoolexecutor, realize java keepAliveTime,bounded work queue,direct display of thread errors 
 Home-page: UNKNOWN
 Author: bfzs
-Author-email: m13148804508@163.com
+Author-email: ydf0509@sohu.com
 Maintainer: ydf
-Maintainer-email: m13148804508@163.com
+Maintainer-email: ydf0509@sohu.com
 License: BSD License
 Description: pip install threadpool_executor_shrink_able
         
