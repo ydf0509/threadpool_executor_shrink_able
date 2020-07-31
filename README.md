@@ -2,6 +2,8 @@ pip install threadpool_executor_shrink_able
 
 
 
+
+
 史上最强的python线程池。
 
 最智能的可自动实时调节线程数量的线程池。此线程池和官方concurrent.futures的线程池 是鸭子类关系，所以可以一键替换类名 或者 import as来替换类名。
@@ -19,6 +21,8 @@ pip install threadpool_executor_shrink_able
 5.有线程池BoundedThreadPoolExecutor改善线程报错和有界队列。
 
 6.patch_builtin_concurrent_futeres_threadpoolexecutor 支持给内置线程池打猴子补丁的方式，一键替换项目中所有原有的Thredpoolexecutor
+
+7.以上是对比concurrent.futures 内置线程池，在博客园和csdn搜索 python自定义线程池这几个关键字，有上百篇博客实现线程池，但总共样子也就两三种，全部是抄袭来抄袭去，没有任何创意，中国程序员真的是很差劲。
 
 用法例子：
 
