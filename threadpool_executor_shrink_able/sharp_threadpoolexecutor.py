@@ -80,7 +80,7 @@ class ThreadPoolExecutorShrinkAble(Executor, LoggerMixin, LoggerLevelSetterMixin
     MIN_WORKERS = 1
     KEEP_ALIVE_TIME = 10
 
-    def __init__(self, max_workers=None, thread_name_prefix=''):
+    def __init__(self, max_workers:int=None, thread_name_prefix=''):
         """
         最好需要兼容官方concurren.futures.ThreadPoolExecutor 和改版的BoundedThreadPoolExecutor，入参名字和个数保持了一致。
         :param max_workers:
@@ -88,7 +88,7 @@ class ThreadPoolExecutorShrinkAble(Executor, LoggerMixin, LoggerLevelSetterMixin
         """
         self._max_workers = max_workers or 4
         self._thread_name_prefix = thread_name_prefix
-        self.work_queue = self._work_queue = queue.Queue(max_workers)
+        self.work_queue = self._work_queue = queue.Queue(max_workers or 10)
         # self._threads = set()
         self._threads = weakref.WeakSet()
         self._lock_compute_threads_free_count = threading.Lock()
@@ -223,8 +223,8 @@ if __name__ == '__main__':
     pool = ThreadPoolExecutorShrinkAble(200)
     # pool = ThreadPoolExecutor(200)  # 测试对比官方自带
 
-    for i in range(300):
-        time.sleep(0.5)  # 这里的间隔时间模拟，当任务来临不密集，只需要少量线程就能搞定f1了，因为f1的消耗时间短，
+    for i in range(30):
+        # time.sleep(0.5)  # 这里的间隔时间模拟，当任务来临不密集，只需要少量线程就能搞定f1了，因为f1的消耗时间短，
         # 不需要开那么多线程，CustomThreadPoolExecutor比ThreadPoolExecutor 优势之一。
         futurex = pool.submit(f1, i)
         # print(futurex.result())

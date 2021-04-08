@@ -50,5 +50,5 @@ python setup.py sdist & twine upload dist/threadpool_executor_shrink_able-1.4.ta
 twine upload dist/*
 
 
-python -m pip install nb_log --upgrade -i https://pypi.org/simple   # 及时的方式，不用等待 阿里云 豆瓣 同步
+python -m pip install threadpool_executor_shrink_able --upgrade -i https://pypi.org/simple   # 及时的方式，不用等待 阿里云 豆瓣 同步
 """
