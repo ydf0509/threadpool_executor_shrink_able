@@ -22,7 +22,7 @@ pip install threadpool_executor_shrink_able
 
 6.patch_builtin_concurrent_futeres_threadpoolexecutor 支持给内置线程池打猴子补丁的方式，一键替换项目中所有原有的Thredpoolexecutor
 
-7.以上是对比concurrent.futures 内置线程池，在博客园和csdn搜索 python自定义线程池这几个关键字，有上百篇博客实现线程池，但总共样子也就两三种，全部是抄袭来抄袭去，而且还很难调用，必须在程序末尾加join啥的，没有任何创意，中国程序员真的是很差劲。
+7.以上是对比concurrent.futures 内置线程池，在博客园和csdn搜索 python自定义线程池这几个关键字，有上百篇博客实现线程池，但总共样子也就两三种，全部是抄袭来抄袭去，而且还很难调用，必须在程序末尾加join啥的，没有任何创意，中国博客园网友真的是很偷懒。
 
 用法例子：
 
