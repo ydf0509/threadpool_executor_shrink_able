@@ -7,7 +7,7 @@ pip install threadpool_executor_shrink_able
 史上最强的python线程池。
 
 最智能的可自动实时调节线程数量的线程池。此线程池和官方concurrent.futures的线程池 是鸭子类关系，所以可以一键替换类名 或者 import as来替换类名。
-对比官方线程池，有4个创新功能或改进。
+对比官方线程池，有4个创新功能或改进。 
 
 1、主要是不仅能扩大，还可自动缩小(官方内置的ThreadpoolExecutor不具备此功能，此概念是什么意思和目的，可以百度java ThreadpoolExecutor的KeepAliveTime参数的介绍)，
 
@@ -353,7 +353,7 @@ if __name__ == '__main__':
     print "当前线程创建列表:%s" %pool.created_list
     print "当前线程创建列表:%s" %pool.free_list
 
-详细代码
+详细代码，
 ```
 
 可以去博客园搜索任意自定义线程池，由于没使用守护线程实现，调用都很麻烦。
