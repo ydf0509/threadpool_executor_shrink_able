@@ -357,3 +357,36 @@ if __name__ == '__main__':
 ```
 
 可以去博客园搜索任意自定义线程池，由于没使用守护线程实现，调用都很麻烦。
+
+
+## 3 有界队列比无界队列的好处
+
+```
+如下例子，如果用官方的原生 ThreadPoolExecutor，那么电脑会内存瞬间卡死。
+如果用 BoundedThreadPoolExecutor 或者 ThreadPoolExecutorShrinkAble 则不会出现内存迅速涨满卡死电脑
+
+因为无界队列迅速把任务添加到work_queue内存队列中。
+
+此外无界队列的坏处包括，如果用线程池去运行消息队列中的消息，这种线程池会迅速把谁有消息从消息队列中间件里面掏空取到内存中，
+破坏了负载均衡，导致有的机器没任务可消费，有的机器忙死。
+```
+
+```python
+import time
+from concurrent.futures import ThreadPoolExecutor
+from threadpool_executor_shrink_able import BoundedThreadPoolExecutor
+
+
+# pool = ThreadPoolExecutor(10)
+pool = BoundedThreadPoolExecutor(10)
+
+def print_long_str(long_str):
+    print(long_str[:10])
+    time.sleep(5)
+
+
+for i in range(10000000):
+    pool.submit(print_long_str,'很长的字符串很占内存'*100000)
+
+
+```
